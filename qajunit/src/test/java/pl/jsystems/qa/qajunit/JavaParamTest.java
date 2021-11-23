@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tags({@Tag("junit"), @Tag("smoke"), @Tag("param")})
 @DisplayName("Param test")
@@ -78,4 +79,15 @@ public class JavaParamTest {
         ENUM_ONE,
         ENUM_TWO
     }
+    @DisplayName("Csv file source parameterized test")
+    @ParameterizedTest(name = "Parameterized test with data from csv file, name: {0} and value: {1}")
+    @EnumSource(value = SimpleEnum.class)
+    public void csvFileSourceTest(SimpleEnum simpleEnum) {
+        assertTrue(simpleEnum.toString().contains("A"));
+    }
+    enum SimpleEnum {
+        A, AA, AAA
+    }
+
+
 }
