@@ -32,7 +32,7 @@ public class JavaParamTest {
 
     @DisplayName("Parameter test with multi param.")
     @ParameterizedTest(name = "Parameter test: {0}")
-    @CsvSource(value = {"Hello; 5", "Hello, junit; 15", "Hello students; 25"}, delimiter = ';')
+    @CsvSource(value = {"Hello; 5", "Hello, junit; 15", "Hello students; 26"}, delimiter = ';')
    // @CsvSource(value = {"Hello, 5", "'Hello, junit', 15", "Hello students, 25"})
     public void multiParamTest(String param, int number){
         assertThat(param).contains("Hello");
