@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/qa.iml" filepath="$PROJECT_DIR$/.idea/qa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qajunit/qajunit.iml" filepath="$PROJECT_DIR$/qajunit/qajunit.iml" />
     </modules>
   </component>
 </project>
