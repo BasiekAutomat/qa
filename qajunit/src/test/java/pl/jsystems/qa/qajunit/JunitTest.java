@@ -9,7 +9,7 @@ import java.util.List;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tags({@Tag("junit"), @Tag("firstTest"), @Tag("zadania1")})
+@Tags({@Tag("junit"), @Tag("noparam"), @Tag("zadania1")})
 @DisplayName("Junit testy")
 public class JunitTest {
 
@@ -87,6 +87,7 @@ public class JunitTest {
     public void googleTruthTest(){
         assertThat(STRING_TESTOWY).contains("ingT");
     }
+
     @Tag("zadania")
     @DisplayName("Zadanie 1")
     @Test
