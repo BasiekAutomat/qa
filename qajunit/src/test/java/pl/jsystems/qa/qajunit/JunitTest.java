@@ -14,23 +14,27 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JunitTest {
 
     @BeforeAll
-    public static void beforeAll(){
-        System.out.println("---beforeAll----");
+    public static void setUpBeforeAll() {
+        System.out.println("========== BeforeAll =========");
     }
-
-    @AfterAll
-    public static void afterAll(){
-        System.out.println("---afterAll----");
-    }
-
-  /*  @BeforeEach
-    public static void beforeEach(){
-        System.out.println("---beforeEach----");
+    @BeforeEach
+    public void setUp(TestInfo testInfo) {
+        System.out.println("========== BeforeEach =========");
+        System.out.println("DisplayName: " + testInfo.getDisplayName());
+        System.out.println("========== Test Name class name: " + testInfo.getTestClass().getClass().getSimpleName()
+                + " \ntest name: " + testInfo.getTestMethod() );
     }
     @AfterEach
-    public static void afterEach(){
-        System.out.println("---afterEach----");
-    }*/
+    public void tearDown(TestInfo testInfo) {
+        System.out.println("========== AfterEach =========");
+        System.out.println("DisplayName: " + testInfo.getDisplayName());
+        System.out.println("========== Test Name class name: " + testInfo.getTestClass()
+                + " \ntest name: " + testInfo.getTestMethod() );
+    }
+    @AfterAll
+    public static void tearDownAfterAll() {
+        System.out.println("========== AfterAll =========");
+    }
 
     private static final String STRING_TESTOWY = "StringTestowy";
 
