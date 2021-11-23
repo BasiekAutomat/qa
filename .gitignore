@@ -5,3 +5,5 @@
 */target/*
 */.allure/*
 */allure-results/*
+/qajunit/.allure/
+/qajunit/allure-results/
