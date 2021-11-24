@@ -51,7 +51,6 @@
             <artifactId>allure-maven</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -68,6 +67,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
