@@ -37,7 +37,7 @@ public class GuiTest extends GuiConfiguration {
 
         usernameOrEmail.click();
         usernameOrEmail.clear();
-        usernameOrEmail.sendKeys("automation112021");
+        usernameOrEmail.sendKeys("basiulas");
         driver.findElement(By.className("login__form-action")).click();
 
         Wait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
@@ -52,7 +52,7 @@ public class GuiTest extends GuiConfiguration {
         driver.findElement(By.id("password")).click();
 
         driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys("Test112021");
+        driver.findElement(By.id("password")).sendKeys("Test123456!");
         driver.findElement(By.className("login__form-action")).click();
 
         final WebElement avatar = driver.findElement(By.cssSelector(".masterbar__item.masterbar__item-me"));
@@ -61,7 +61,7 @@ public class GuiTest extends GuiConfiguration {
 
         avatar.click();
 
-        assertThat(driver.findElement(By.className("profile-gravatar__user-display-name")).getText()).isEqualTo("automation112021");
+        assertThat(driver.findElement(By.className("profile-gravatar__user-display-name")).getText()).isEqualTo("basiulas");
 
         driver.findElement(By.cssSelector("button[title=\"Log out of WordPress.com\"]")).click();
 
@@ -169,9 +169,9 @@ public class GuiTest extends GuiConfiguration {
         wordpressMainPage.clickLogIn();
 
         loginPage = new LoginPage(driver);
-        loginPage.enterUser("automation112021");
+        loginPage.enterUser("basiulas");
         loginPage.userContinueButton.click();
-        loginPage.enterPass("Test112021");
+        loginPage.enterPass("Test123456!");
         loginPage.passConfirmButton.click();
     }
 
