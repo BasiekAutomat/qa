@@ -1,10 +1,13 @@
 package pl.jsystems.qa.qagui;
 
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
 public class KatalonTest extends GuiConfiguration {
 
+    @Tags({@Tag("FrontEnd"), @Tag("Kotlin")})
     @Test
 
         public void testUntitledTestCase() throws Exception {
