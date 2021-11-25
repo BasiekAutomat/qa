@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pl.jsystems.qa.qagui.pages.*;
+import pl.jsystems.qa.qagui.classic.pages.*;
 
 import java.time.Duration;
 import java.util.Set;
